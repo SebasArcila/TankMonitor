@@ -1,6 +1,6 @@
 # 🚰 TankMonitor
 
-Plataforma de monitoreo industrial en tiempo real para una planta de tratamiento de agua. Un simulador de PLC genera lecturas de sensores cada segundo, un backend en Go expone los datos a través de una API REST, y una aplicación cliente en Flutter los visualiza dinámicamente con actualización automática.
+Plataforma de monitoreo industrial en tiempo real para una planta de tratamiento de agua. Un simulador de datos genera lecturas cada segundo, un backend en Go expone los datos a través de una API REST, y una aplicación cliente en Flutter los visualiza dinámicamente con actualización automática.
 
 Este proyecto ha sido desarrollado como portafolio técnico, demostrando buenas prácticas de arquitectura backend en Go, persistencia con PostgreSQL y desarrollo frontend multiplataforma con Flutter.
 
@@ -29,7 +29,7 @@ Este proyecto ha sido desarrollado como portafolio técnico, demostrando buenas 
                                        └──────────────┘
 ```
 
-**Decisión clave de diseño:** Desacoplamiento total entre el backend y el frontend mediante una API REST estándar. Esto permite extender o reemplazar el cliente web/móvil sin alterar la lógica de negocio ni el simulador del PLC.
+**Decisión clave de diseño:** Desacoplamiento total entre el backend y el frontend mediante una API REST estándar. Esto permite extender o reemplazar el cliente web/móvil sin alterar la lógica de negocio ni el simulador del datos.
 
 ---
 
@@ -37,7 +37,7 @@ Este proyecto ha sido desarrollado como portafolio técnico, demostrando buenas 
 
 | Capa | Tecnología | Justificación |
 |---|---|---|
-| **Backend** | Go + Gin | Alto rendimiento, tipado fuerte y soporte nativo de concurrencia (goroutines) ideal para la simulación paralela del PLC. |
+| **Backend** | Go + Gin | Alto rendimiento, tipado fuerte y soporte nativo de concurrencia (goroutines) ideal para la simulación paralela. |
 | **Base de Datos** | PostgreSQL + pgx | Motor relacional robusto. El driver `pgx/v5` ofrece una comunicación nativa extremadamente rápida y eficiente con PostgreSQL. |
 | **Frontend** | Flutter (Dart) | Renderizado rápido y base de código única para Web, Android, iOS y Desktop. |
 | **Gráficos** | `fl_chart` | Visualización de series temporales eficiente para datos históricos (Temperatura). |
@@ -47,7 +47,7 @@ Este proyecto ha sido desarrollado como portafolio técnico, demostrando buenas 
 
 ## ✨ Funcionalidades Principales
 
-- **Simulador de PLC Industrial**: Genera automáticamente datos aleatorios pero realistas para 4 variables clave: Temperatura, pH, Nivel de agua y Estado de la bomba de agua.
+- **Simulador de Datos Industrial**: Genera automáticamente datos aleatorios pero realistas para 4 variables clave: Temperatura, pH, Nivel de agua y Estado de la bomba de agua.
 - **API REST Robusta**:
   - `GET /status` — Obtiene la lectura más reciente del tanque.
   - `GET /history?limit=N` — Devuelve las últimas N lecturas registradas (por defecto 20).
