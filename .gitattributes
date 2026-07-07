@@ -1,0 +1,7 @@
+# Evitar que GitHub cuente los archivos generados nativos (C++, Java, Objective-C, etc.) como parte de las estadísticas de lenguaje
+flutter/windows/** linguist-vendored
+flutter/linux/** linguist-vendored
+flutter/macos/** linguist-vendored
+flutter/android/** linguist-vendored
+flutter/ios/** linguist-vendored
+flutter/web/** linguist-vendored
