@@ -1,0 +1,37 @@
+name: tankmonitor_app
+description: "TankMonitor - App de monitoreo industrial (portafolio)"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# ---------------------------------------------------------------------
+# dependencies: librerías que la app NECESITA para funcionar en producción.
+# (dev_dependencies, más abajo, son solo para desarrollo/testing, no
+# viajan con la app final).
+# ---------------------------------------------------------------------
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # http: cliente HTTP simple de la librería estándar de Flutter/Dart.
+  # Lo usamos para llamar a nuestra API Go (/status, /history).
+  # (Más adelante, cuando el proyecto crezca, migraremos a "dio", que
+  # tiene más features como interceptores, pero http es perfecto para
+  # aprender los conceptos base sin capas extra.)
+  http: ^1.2.0
+
+  # fl_chart: librería de gráficas para Flutter. La usamos para graficar
+  # el historial de temperatura/pH/nivel en el tiempo.
+  fl_chart: ^0.68.0
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

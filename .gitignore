@@ -1,0 +1,40 @@
+# Editor & IDE files
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Go compilation output & binaries
+backend/backend
+backend/backend.exe
+backend/tankmonitor-backend
+backend/tankmonitor-backend.exe
+backend/*.exe
+backend/*.test
+backend/out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Docker volumes
+postgres_data/
+
+# Flutter & Dart dependencies & build output (general fallback)
+flutter/.dart_tool/
+flutter/.flutter-plugins
+flutter/.flutter-plugins-dependencies
+flutter/.pub-cache/
+flutter/.pub/
+flutter/build/
+flutter/flutter_*.png
