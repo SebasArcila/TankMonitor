@@ -10,8 +10,8 @@ Este proyecto ha sido desarrollado como portafolio técnico, demostrando buenas 
 
 ```text
 ┌─────────────────┐      Cada 1s       ┌──────────────┐
-│  Simulador PLC   │ ─────Inserta─────▶│  PostgreSQL   │
-│  (Goroutine Go)  │                    │  sensor_data  │
+│ Simulador Datos │ ─────Inserta─────▶ │  PostgreSQL  │
+│ (Goroutine Go)  │                    │  sensor_data │
 └─────────────────┘                    └──────┬───────┘
                                               │ Lee
                                               ▼
